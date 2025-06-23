@@ -17,9 +17,7 @@ public class UserSpec {
 
     public static RequestSpecification basicUsersRequestSpec = with()
             .filter(withCustomTemplates())
-            .log().uri()
-            .log().body()
-            .log().headers()
+            .log().all()
             .contentType(JSON)
             .header("x-api-key", xApiKey);
 
